@@ -1,0 +1,15 @@
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #2d2d2d;
+}
+
+.btn {
+  color: $white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: $box-shadow;
+}
+
+.drop-shadow {
+  filter: drop-shadow($box-shadow);
+}
