@@ -65,12 +65,12 @@ export const ContactForm = () => {
         <div>
           <textarea
             name='message'
-            placeholder='Hi, Kotov! I write to you...'
+            placeholder='Добрий день!'
             onChange={handleChange}
             value={values.message}
             required
           ></textarea>
-          <label htmlFor='message'>Message*</label>
+          <label htmlFor='message'>Повідомлення*</label>
         </div>
 
         <button
