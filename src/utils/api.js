@@ -1,5 +1,5 @@
 export const getProducts = async () => {
-  const res = await fetch(`${process.env.API_URL}/products`); // || 'https://localhost:1337'
+  const res = await fetch(`${process.env.API_URL}/products?_limit=2`); // || 'https://localhost:1337'
 
   return res.json();
 };

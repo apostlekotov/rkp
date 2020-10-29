@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { getProducts } from '@/utils/api';
+import { Product } from '@/components/Product';
 import { Contacts } from '@/components/Contacts';
 
 const Index = ({ products }) => {
-
   return (
     <>
       <Head>
@@ -22,7 +22,32 @@ const Index = ({ products }) => {
           
         </main>
 
-        <Products products={products} />
+        <section id="sales">
+          <h3>Акція</h3>
+          {
+            products.map((product) => (
+              <Product
+                key={product.id}
+                title={product.title}
+                price={product.price}
+                old_price={product.old_price}
+                weight={product.weight}
+                img={
+                  product.photo?.formats.medium.url ||
+                  'https://kotovjs-portfolio.s3.eu-central-1.amazonaws.com/large_sedam_93d158cc85.jpg'
+                }
+              />
+            ))
+          } 
+        </section>
+
+        <section id="about">
+          <h3>Про нас</h3>
+        </section>
+
+        <section>
+          coop
+        </section>
         
         <Contacts />
       </div>
