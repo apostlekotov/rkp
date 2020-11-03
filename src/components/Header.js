@@ -1,4 +1,7 @@
 import React from 'react';
+import { Cart } from "@/components/Cart";
+
+// import { ProductContext } from '@/components/Context'
 
 export const Header = () => {
   return (
@@ -23,8 +26,7 @@ export const Header = () => {
       </nav>
 
       <div className="cart">
-        <span className="badge bg-primary rounded-pill">2</span>
-        <i className="fas fa-shopping-basket display-5"></i>
+          <Cart/>
       </div>
     </div>
   );

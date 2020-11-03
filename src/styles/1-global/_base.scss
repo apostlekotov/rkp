@@ -13,3 +13,92 @@ body {
 .drop-shadow {
   filter: drop-shadow($box-shadow);
 }
+.cart {
+  .hr-dashed {
+    margin: 20px 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 2px dashed #ddd;
+  }
+  .cart-list-wrapper{
+    position: fixed;
+    left: 0;
+    width: 98%;
+    background: white;
+    margin: 20px;
+
+    .cart-product-wrapper {
+      .btn-remove {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .btn-count {
+        border: none;
+        background-color: transparent;
+      }
+
+      table {
+        margin: auto;
+        width: 80%;
+        td {
+          text-align: center;
+          width: 20%;
+        }
+      }
+      img {
+        width: 200px;
+      }
+    }
+
+    .cart-total-price {
+      float: right;
+    }
+
+    .btn-order-wrapper {
+      float: right;
+    }
+  }
+}
+
+.btn-cart{
+  font-size: 100%;
+  font-family: inherit;
+  padding: 0;
+  border: 0;
+  background-color: white;
+}
+
+#sales {
+  .sales-title {
+    text-align: center;
+  }
+
+  .product-wrapper {
+    width: auto;
+    color: white;
+    padding: 50px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://www.cavi-cav.com.ua/wp-content/uploads/2018/09/krasnaya-ikra-gorbushi.jpg);
+    background-size: cover;
+
+    .btn-add-cart {
+      margin: 10px;
+    }
+
+    .price{
+      width: 100%;
+
+      .new-price{
+        padding: 5px;
+        float: left;
+        background-color: $primary;
+        color: white;
+      }
+
+      .old-price{
+        padding: 5px;
+      }
+    }
+  }
+}
