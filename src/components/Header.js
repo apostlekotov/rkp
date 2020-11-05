@@ -1,8 +1,6 @@
 import React from 'react';
 import { Cart } from "@/components/Cart";
 
-// import { ProductContext } from '@/components/Context'
-
 export const Header = () => {
   return (
     <div className='navbar navbar-expand-lg fixed-top d-flex justify-content-between bg-white py-3 px-5'>

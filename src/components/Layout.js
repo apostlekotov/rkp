@@ -1,16 +1,16 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { ProductProvider } from "@/components/Store";
+import StoreState from "../context/store/StoreState";
 
 export const Layout = ({ children }) => {
   return (
     <>
-        <ProductProvider>
+        <StoreState>
           <Header />
             {children}
           <Footer />
-        </ProductProvider>
+        </StoreState>
     </>
   );
 };

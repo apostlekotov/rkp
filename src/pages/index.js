@@ -27,7 +27,7 @@ const Index = ({ products }) => {
             <h3 className="sales-title">Акція</h3>
             <div className="container">
                 <div className="row">
-                    <Product/>
+                    <Product products = { products }/>
                 </div>
             </div>
         </section>
@@ -47,8 +47,8 @@ const Index = ({ products }) => {
 };
 
 export async function  getServerSideProps() {
-  const products = await getProducts();
-  return { props: { products } };
+    const products = await getProducts();
+    return { props: { products } };
 }
 
 export default Index;
