@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getProducts } from '@/utils/api';
 import { Contacts } from '@/components/Contacts';
-import Store from '@/components/Store';
+import React from "react";
 
 const Index = ({ products }) => {
   return (
@@ -23,8 +23,12 @@ const Index = ({ products }) => {
         </main>
 
         <section id="sales">
-          <h3>Акція</h3>
-          <Store products={ products }/>
+            <h3 className="sales-title">Акція</h3>
+            <div className="container">
+                <div className="row">
+                    <Product products = { products }/>
+                </div>
+            </div>
         </section>
 
         <section id="about">
@@ -37,14 +41,13 @@ const Index = ({ products }) => {
         
         <Contacts />
       </div>
-      
     </>
   );
 };
 
 export async function  getServerSideProps() {
-  const products = await getProducts();
-  return { props: { products } };
-};
+    const products = await getProducts();
+    return { props: { products } };
+}
 
 export default Index;
