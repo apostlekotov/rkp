@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getProducts } from '@/utils/api';
 import { Contacts } from '@/components/Contacts';
-import React from "react";
+import { Product } from "@/components/Product";
 
 const Index = ({ products }) => {
   return (
