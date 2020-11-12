@@ -1,10 +1,12 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useState } from 'react';
 import StoreContext from '../context/store/StoreContext';
+import Modal from "@/components/Modal";
 
 export const Cart = () => {
     const storeContext = useContext(StoreContext);
 
     const [showing, setShowing] = React.useState("false");
+    const [show, setShow] = useState(false);
 
     return (
         <>
@@ -26,12 +28,12 @@ export const Cart = () => {
             <div className="cart-list-wrapper">
                 { !showing
                     ?
-                    <div>
+                    <div className="cart-list">
                         <hr className="hr-dashed"/>
                         {
                             (storeContext.cart.length === 0)
                             ?
-                            <div>
+                            <div className="cart-list-empty">
                                 <h2 >У кошику пусто :(</h2>
                                 <hr className="hr-dashed"/>
                             </div>
@@ -64,7 +66,7 @@ export const Cart = () => {
                                 }
                                 <hr className="hr-dashed"/>
                                 <div className="btn-order-wrapper">
-                                    <button className="btn btn-lg btn-primary">Замовити</button>
+                                    <button className="btn btn-lg btn-primary" onClick={ () => setShow(true) }>Замовити</button>
                                 </div>
                                 <div className="cart-total-price">
                                 <h3>До сплати:
@@ -78,6 +80,7 @@ export const Cart = () => {
                                     </b>
                                 </h3>
                             </div>
+                                <Modal show={ show } setShow={ setShow }/>
                             </div>
                         }
                     </div>
