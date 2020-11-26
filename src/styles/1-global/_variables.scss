@@ -3,14 +3,25 @@ $secondary: #fff;
 
 $display-font-weight: 800;
 
+// buttons
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+$btn-padding-y-lg: 0.75rem;
+$btn-padding-x-lg: 3.25rem;
+
 $border-radius: 1.5rem;
 $border-radius-lg: 25rem;
 
-$input-btn-padding-y: 0.5rem;
-$input-btn-padding-x: 2rem;
+// inputs
 
-$input-btn-padding-y-lg: 0.75rem;
-$input-btn-padding-x-lg: 3.25rem;
+$input-bg: #F5F5F5;
+$input-border-color: transparent;
+$input-focus-border-color: transparent;
+$input-focus-bg: #fff;
+$input-btn-padding-y: 1rem;
+$input-btn-padding-x: 1.5rem;
 
 $box-shadow-sm: 0 4px 8px rgba($primary, 0.36);
 $box-shadow: 0 9px 16px rgba($primary, 0.24);

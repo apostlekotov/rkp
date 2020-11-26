@@ -1,0 +1,54 @@
+main {
+	position: relative;
+	min-height: 80vh;
+	padding-top: 20vh;
+
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	img {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 30rem;
+		margin: auto;
+		right: auto;
+		bottom: auto;
+	}
+
+	@include media-breakpoint-up(xl) {
+		h1 {
+			font-size: 3rem;
+		}
+
+		img {
+			max-width: 40vw !important;
+			right: -10vw !important;
+			bottom: -10rem !important;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		img {
+			max-width: 60vw;
+			right: -10vw;
+			bottom: -10rem;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		img {
+			position: absolute;
+			max-width: 45vw;
+			right: -10vw;
+			bottom: -5rem;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+}

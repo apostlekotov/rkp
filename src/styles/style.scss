@@ -7,5 +7,14 @@
 // global
 @import '1-global/base';
 
+// elements
+@import '2-elements/cart';
+@import '2-elements/slider';
+
 // layouts
-@import '2-layouts/navbar';
+@import '3-layouts/navbar';
+@import '3-layouts/hero';
+@import '3-layouts/sales';
+@import '3-layouts/about';
+@import '3-layouts/contacts';
+@import '3-layouts/footer';

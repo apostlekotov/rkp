@@ -1,0 +1,145 @@
+#sales {
+	.row {
+		min-height: 55vh;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 1.5rem;
+			width: 100%;
+			top: 50%;
+			left: 0;
+			transform: translateY(50%) translateX(0);
+			background-color: #fff;
+
+			@include media-breakpoint-up(sm) {
+				transform: translateY(-50%) translateX(0);
+			}
+
+			@include media-breakpoint-up(xl) {
+				height: 100%;
+				width: 1.5rem;
+				top: 0;
+				left: 50%;
+				transform: translateY(0) translateX(-50%);
+			}
+		}
+
+		.product-wrapper {
+			position: relative;
+			color: white;
+			background-size: cover;
+
+			&:nth-child(1) {
+				.product-bg {
+					background-position: center;
+					background-size: cover;
+					background-image: url('/img/product_bg_1.png');
+				}
+
+				img {
+					max-width: 15rem;
+				}
+			}
+
+			&:nth-child(2) {
+				.product-bg {
+					background-position: center;
+					background-size: cover;
+					background-image: url('/img/product_bg_2.png');
+				}
+
+				img {
+					width: 100%;
+					max-width: 17rem;
+				}
+			}
+
+			.btn {
+				width: 100%;
+
+				@include media-breakpoint-up(sm) {
+					width: auto;
+				}
+			}
+
+			@include media-breakpoint-up(xl) {
+				&:nth-child(1) {
+					img {
+						max-width: 19rem;
+					}
+				}
+
+				&:nth-child(2) {
+					img {
+						max-width: 21rem;
+					}
+				}
+			}
+
+			@media (max-width: '1368px') {
+				&:nth-child(1) {
+					img {
+						max-width: 16rem;
+					}
+				}
+
+				&:nth-child(2) {
+					img {
+						max-width: 18rem;
+					}
+				}
+			}
+
+			.h1 {
+				max-width: 13rem;
+			}
+
+			img {
+				position: relative;
+				bottom: auto;
+				right: auto;
+				margin-bottom: 1rem;
+
+				@include media-breakpoint-up(sm) {
+					position: absolute;
+					bottom: 3rem;
+					right: 3rem;
+					margin-bottom: auto;
+				}
+			}
+
+			.product-bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgb(0, 0, 0);
+					background: linear-gradient(
+						180deg,
+						rgba(0, 0, 0, 0.65) 0%,
+						rgba(0, 0, 0, 0.15) 100%
+					);
+
+					@supports (
+						(-webkit-backdrop-filter: none) or (backdrop-filter: none)
+					) {
+						-webkit-backdrop-filter: blur(3px);
+						backdrop-filter: blur(3px);
+					}
+				}
+			}
+		}
+	}
+}

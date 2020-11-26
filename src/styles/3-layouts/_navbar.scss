@@ -1,0 +1,37 @@
+.navbar {
+	transition: all 0.2s ease-in-out;
+
+	a {
+		color: inherit !important;
+		transition: 0.3s ease-in-out;
+	}
+
+	.navbar-brand img {
+		height: 60px;
+
+		@include media-breakpoint-up(sm) {
+			height: 80px;
+		}
+	}
+
+	.navbar-brand:hover {
+		transform: scale(0.95);
+	}
+
+	.nav-item:hover {
+		color: $primary;
+	}
+
+	.cart {
+		position: relative;
+
+		.badge {
+			position: absolute;
+			top: 0;
+			right: -20%;
+			padding: 0.35rem 0.5rem;
+			font-weight: 800;
+			box-shadow: $box-shadow-sm;
+		}
+	}
+}

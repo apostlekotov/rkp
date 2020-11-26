@@ -1,6 +1,36 @@
+html {
+	overflow-x: hidden;
+	height: 100%;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif !important;
+	color: $black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	color: #2d2d2d;
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+}
+
+h1,
+.h1 {
+	font-weight: 900;
+}
+
+strong {
+	color: $primary;
 }
 
 .btn {
@@ -11,145 +41,10 @@ body {
 }
 
 .drop-shadow {
+	-webkit-filter: drop-shadow($box-shadow);
 	filter: drop-shadow($box-shadow);
 }
-.cart {
-	.hr-dashed {
-		margin: 20px 0;
-		padding: 0;
-		height: 0;
-		border: none;
-		border-top: 2px dashed #ddd;
-	}
 
-	.cart-list-wrapper {
-		position: fixed;
-		left: 0;
-		width: 100%;
-		background: white;
-		margin-top: 30px;
-
-		.cart-list {
-			height: 100vh;
-			width: 80%;
-			margin: auto;
-
-			.cart-list-empty {
-				text-align: center;
-			}
-
-			.cart-product-wrapper {
-				.btn-remove {
-					width: 40px;
-					height: 40px;
-					border-radius: 50%;
-				}
-				.btn-count {
-					border: none;
-					background-color: transparent;
-				}
-
-				table {
-					margin: auto;
-					width: 80%;
-					td {
-						text-align: center;
-						width: 20%;
-					}
-				}
-				img {
-					width: 200px;
-				}
-			}
-
-			.cart-total-price {
-				float: right;
-			}
-
-			.btn-order-wrapper {
-				float: right;
-			}
-		}
-	}
-}
-
-.btn-cart {
-	font-size: 100%;
-	font-family: inherit;
-	padding: 0;
-	border: 0;
-	background-color: white;
-}
-
-#sales {
-	.sales-title {
-		text-align: center;
-	}
-
-	.product-wrapper {
-		width: auto;
-		color: white;
-		padding: 50px;
-		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url('https://www.cavi-cav.com.ua/wp-content/uploads/2018/09/krasnaya-ikra-gorbushi.jpg');
-		background-size: cover;
-
-		.btn-add-cart {
-			margin: 10px;
-		}
-
-		.price {
-			width: 100%;
-
-			.new-price {
-				padding: 5px;
-				float: left;
-				background-color: $primary;
-				color: white;
-			}
-
-			.old-price {
-				padding: 5px;
-			}
-		}
-	}
-}
-
-.modal {
-	display: block;
-	background: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(8px);
-
-	.modal-form {
-		width: 400px;
-		background-color: white;
-		padding: 10px;
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-
-		.modal-footer {
-			justify-content: center;
-		}
-	}
-}
-
-.alert-container {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 9999 !important;
-	cursor: pointer;
-
-	.alert {
-		opacity: 0.9;
-	}
-	.alert:hover {
-		opacity: 1;
-	}
-}
 .close {
 	font-size: 24px;
 	font-family: inherit;
