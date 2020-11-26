@@ -10,7 +10,7 @@ export const Cart = () => {
 
 	return (
 		<>
-			<button className='btn-cart' onClick={() => setShowing(!showing)}>
+			<div className='btn-cart' onClick={() => setShowing(!showing)}>
 				{storeContext.cart.length > 0 ? (
 					<span className='badge bg-primary rounded-pill'>
 						{storeContext.cart.reduce((count, currentProduct) => {
@@ -19,7 +19,7 @@ export const Cart = () => {
 					</span>
 				) : null}
 				<i className='fas fa-shopping-basket display-5' />
-			</button>
+			</div>
 			<div className='cart-list-wrapper'>
 				{!showing ? (
 					<div className='cart-list'>
