@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Footer = () => (
-  <footer>
-    <span>©2020 Рибкоппродукт</span>
-  </footer>
+	<footer className='py-5 text-center'>
+		<span className="text-muted">©2020 Рибкоппродукт</span>
+	</footer>
 );
