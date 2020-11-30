@@ -33,7 +33,7 @@ export const Cart = () => {
 								<div>
 									{storeContext.cart.map((product) => (
 										<div key={product.id} className='row p-2 cart-product-wrapper'>
-											<div className="col-sm d-flex d-flex justify-content-center align-items-center">
+											<div className="col-sm mb-3 d-flex d-flex justify-content-center align-items-center">
 												<img
 													src={process.env.API_URL + product.photo.formats.medium.url}
 												/>
@@ -86,7 +86,7 @@ export const Cart = () => {
 										</div>
 									))}
 									<hr className='hr-dashed' />
-									<div className='btn-order-wrapper'>
+									<div className='btn-order-wrapper mb-3'>
 										<div className="d-flex flex-row-reverse">
 											<h3 className="p-2">
 												До сплати:
