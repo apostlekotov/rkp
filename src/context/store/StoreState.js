@@ -6,6 +6,7 @@ import {
 	INCREASE,
 	DECREASE,
 	REMOVE_PRODUCT_FROM_CART,
+	RESET,
 } from '../ActionTypes';
 
 const StoreState = (props) => {
@@ -27,6 +28,10 @@ const StoreState = (props) => {
 		dispatch({ type: REMOVE_PRODUCT_FROM_CART, product: product });
 	};
 
+	const reset = () => {
+		dispatch({ type: RESET, payload: {cart: []} });
+	};
+
 	return (
 		<StoreContext.Provider
 			value={{
@@ -35,6 +40,7 @@ const StoreState = (props) => {
 				increase,
 				decrease,
 				removeProductFromCart,
+				reset
 			}}
 		>
 			{props.children}

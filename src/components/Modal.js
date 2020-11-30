@@ -6,7 +6,7 @@ import StoreContext from '../context/store/StoreContext';
 
 const Modal = ({ show, setShow }) => {
 	const alertContext = useContext(AlertContext);
-	const { cart } = useContext(StoreContext);
+	const { cart, reset } = useContext(StoreContext);
 
 	const {
 		values,
@@ -57,6 +57,7 @@ const Modal = ({ show, setShow }) => {
 					title: 'Дякуємо за замовлення!',
 					text: 'Наш менеджер звяжеться з Вами за лічені хвилини.',
 				});
+				reset();
 			}else {
 				alertContext.setAlert(999, {
 					type: 'danger',

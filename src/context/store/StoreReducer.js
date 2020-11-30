@@ -2,7 +2,7 @@ import {
 	ADD_PRODUCT_TO_CART,
 	INCREASE,
 	DECREASE,
-	REMOVE_PRODUCT_FROM_CART,
+	REMOVE_PRODUCT_FROM_CART, RESET,
 } from '../ActionTypes';
 
 const addProductToCart = (product, state) => {
@@ -68,6 +68,10 @@ const removeProductFromCart = (product, state) => {
 	return { ...state, cart: updatedCart };
 };
 
+const reset = () => {
+	return {cart: []};
+}
+
 const StoreReducer = (state, action) => {
 	switch (action.type) {
 		case ADD_PRODUCT_TO_CART:
@@ -78,6 +82,8 @@ const StoreReducer = (state, action) => {
 			return decrease(action.product, state);
 		case REMOVE_PRODUCT_FROM_CART:
 			return removeProductFromCart(action.product, state);
+		case RESET:
+			return reset(action.payload);
 		default:
 			return state;
 	}
