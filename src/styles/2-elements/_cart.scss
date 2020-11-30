@@ -12,8 +12,9 @@
 		width: 100%;
 		background: white;
 		margin-top: 30px;
+		overflow: scroll;
 		.cart-layout{
-			height: 100vh;
+			height: calc(100vh - 99px);
 
 			.title-wrap{
 				font-weight: 900;
