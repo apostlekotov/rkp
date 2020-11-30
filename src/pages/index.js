@@ -3,17 +3,17 @@ import { getProducts } from '@/utils/api';
 import { Contacts } from '@/components/Contacts';
 import { Product } from '@/components/Product';
 import { PartnersList } from '@/components/PartnersList';
-import {useContext} from "react";
-import AlertContext from "../context/alert/AlertContext";
+import { useContext } from 'react';
+import AlertContext from '../context/alert/AlertContext';
 
 const Index = ({ products }) => {
 	const alertContext = useContext(AlertContext);
 
 	const click = () => {
 		alertContext.setAlert(999, {
-			img: '/img/certificate.jpg'
+			img: '/img/certificate.jpg',
 		});
-	}
+	};
 
 	return (
 		<>
@@ -73,18 +73,21 @@ const Index = ({ products }) => {
 				<img
 					src='/img/iso9001.png'
 					width='175px'
+					height='175px'
 					className='m-4 m-md-5'
 					alt='certificate'
 				/>
 				<img
 					src='/img/iso22000.png'
 					width='175px'
+					height='175px'
 					className='m-4 m-md-5'
 					alt='certificate'
 				/>
 				<img
 					src='/img/nassr.png'
 					width='175px'
+					height='175px'
 					className='m-4 m-md-5'
 					alt='certificate'
 				/>

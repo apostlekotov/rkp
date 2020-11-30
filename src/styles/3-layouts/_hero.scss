@@ -4,7 +4,7 @@ main {
 	padding-top: 20vh;
 
 	h1 {
-		font-size: 2.25rem;
+		font-size: 2.2rem !important;
 	}
 
 	img {
@@ -19,7 +19,7 @@ main {
 
 	@include media-breakpoint-up(xl) {
 		h1 {
-			font-size: 3rem;
+			font-size: 4rem !important;
 		}
 
 		img {

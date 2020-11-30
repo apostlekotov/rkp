@@ -18,8 +18,12 @@
 		transform: scale(0.95);
 	}
 
-	.nav-item:hover {
-		color: $primary;
+	.nav-item {
+		font-size: 1.2rem;
+
+		&:hover {
+			color: $primary;
+		}
 	}
 
 	.cart {
