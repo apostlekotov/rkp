@@ -1,15 +1,55 @@
+html {
+	overflow-x: hidden;
+	height: 100%;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif !important;
-  color: #2d2d2d;
+	font-family: 'Montserrat', sans-serif !important;
+	color: $black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: #2d2d2d;
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+}
+
+h1,
+.h1 {
+	font-weight: 900;
+}
+
+strong {
+	color: $primary;
 }
 
 .btn {
-  color: $white !important;
-  font-weight: 600;
-  text-transform: uppercase;
-  box-shadow: $box-shadow;
+	color: $white !important;
+	font-weight: 600;
+	text-transform: uppercase;
+	box-shadow: $box-shadow;
 }
 
 .drop-shadow {
-  filter: drop-shadow($box-shadow);
+	-webkit-filter: drop-shadow($box-shadow);
+	filter: drop-shadow($box-shadow);
+}
+
+.close {
+	font-size: 24px;
+	font-family: inherit;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	float: right;
 }

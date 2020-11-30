@@ -1,0 +1,37 @@
+.slider {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	img {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		display: inline-block;
+		padding: 1rem;
+		max-width: 12rem;
+		height: auto;
+	}
+
+	@include media-breakpoint-up(md) {
+		img {
+			padding: 1.5rem;
+			max-width: 16rem;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		img {
+			padding: 3rem;
+			max-width: 22rem;
+		}
+	}
+}
