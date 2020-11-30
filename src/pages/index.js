@@ -3,8 +3,18 @@ import { getProducts } from '@/utils/api';
 import { Contacts } from '@/components/Contacts';
 import { Product } from '@/components/Product';
 import { PartnersList } from '@/components/PartnersList';
+import {useContext} from "react";
+import AlertContext from "../context/alert/AlertContext";
 
 const Index = ({ products }) => {
+	const alertContext = useContext(AlertContext);
+
+	const click = () => {
+		alertContext.setAlert(999, {
+			img: '/img/certificate.jpg'
+		});
+	}
+
 	return (
 		<>
 			<Head>
@@ -48,7 +58,7 @@ const Index = ({ products }) => {
 							з управління якістю та безпечністю харчової продукції ISO9000 і
 							ISO22000.
 						</p>
-						<button className='btn btn-primary'>
+						<button className='btn btn-primary' onClick={click}>
 							Перелглянути сертифікати
 						</button>
 					</div>

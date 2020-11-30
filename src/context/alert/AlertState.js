@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import AlertContext from "./AlertContext";
+import Alert from '../../components/Alert';
 
-const timeout = 6666;
+// const timeout = 5555;
 
 const AlertState = (props) => {
     const [alerts, setAlerts] = useState([])
 
     const setAlert = (id, data) => {
         setAlerts([{ id: id, data }]);
-        setTimeout(() => removeAlert(id), timeout);
+        // setTimeout(() => removeAlert(id), timeout);
     };
 
     const removeAlert = id => {
@@ -24,6 +25,16 @@ const AlertState = (props) => {
             }}
         >
             {props.children}
+            <AlertContext.Consumer>
+                {({ alerts }) => (
+                    <div className='alert-container'>
+                        {alerts.map((item) => {
+                            const { data } = item;
+                            return <Alert key={item.id} {...{ data }} />;
+                        })}
+                    </div>
+                )}
+            </AlertContext.Consumer>
         </AlertContext.Provider>
     );
 }

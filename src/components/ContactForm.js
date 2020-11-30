@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useFormik } from 'formik';
 import { sendMail } from '@/utils/api';
+import AlertContext from "../context/alert/AlertContext";
 
 export const ContactForm = () => {
+	const alertContext = useContext(AlertContext);
+
 	const {
 		values,
 		handleChange,
@@ -29,6 +32,20 @@ export const ContactForm = () => {
 			setTimeout(() => {
 				setStatus({ success: null });
 			}, 4000);
+
+			if(res.ok === true){
+				alertContext.setAlert(999, {
+					type: 'success',
+					title: 'Дякуємо за звернення!',
+					text: 'Наш менеджер звяжеться з Вами за лічені хвилини.',
+				});
+			}else {
+				alertContext.setAlert(999, {
+					type: 'danger',
+					title: 'Вибачте, сталася помилка(',
+					text: 'Перевірте підключення!',
+				});
+			}
 		},
 	});
 

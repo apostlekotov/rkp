@@ -1,28 +1,40 @@
 import React, { useContext } from 'react';
 import AlertContext from '../context/alert/AlertContext';
 
-const Alert = ({ data: { type, title, text } }) => {
+const Alert = ({ data: {title, text, img } }) => {
 	const alertContext = useContext(AlertContext);
 
 	return (
 		<>
-			<div className='alert'>
-				<div className={'alert ' + type ? `alert-${type}` : ''}>
-					<div className='alert-heading'>
-						{title}
-						<button
-							type='button'
-							className='close'
-							data-dismiss='modal'
-							aria-label='Close'
-							onClick={alertContext.removeAlert.bind(this, 999)}
-						>
-							<span aria-hidden='true'>&times;</span>
-						</button>
+			<div className="modal">
+				<div className='modal-form p-4'>
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12 d-flex justify-content-end">
+								<button
+									type='button'
+									className='btn-close'
+									data-dismiss='modal'
+									aria-label='Close'
+									onClick={alertContext.removeAlert.bind(this, 999)}
+								>
+								</button>
+							</div>
+						</div>
+						<div className="msg">
+							<div className="row">
+								<div className="col-md-12 h3 text-center">
+									{title}
+								</div>
+								<img src={img} alt=""/>
+							</div>
+							<div className="row">
+								<div className="col-md-12 h5 text-center">
+									{text}
+								</div>
+							</div>
+						</div>
 					</div>
-					<p>
-						<small>{text}</small>
-					</p>
 				</div>
 			</div>
 		</>
