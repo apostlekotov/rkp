@@ -1,6 +1,6 @@
 # RKP
 
-> Product page for caviar company - [rkp.vercel.app](https://rkp.vercel.app)
+> Product page for caviar distributor - [rkp.vercel.app](https://rkp.vercel.app)
 
 ![rkp.vercel.app](public/img/thumbnail.png)
 
