@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import { useFormik } from 'formik';
-import { sendMail } from '@/utils/api';
+import { sendMail } from '@/utils/mock-api';
 import AlertContext from '../context/alert/AlertContext';
 import StoreContext from '../context/store/StoreContext';
 

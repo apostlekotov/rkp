@@ -38,12 +38,7 @@ export const Cart = () => {
 											className='row p-2 cart-product-wrapper'
 										>
 											<div className='col-sm mb-3 d-flex d-flex justify-content-center align-items-center'>
-												<img
-													src={
-														process.env.API_URL +
-														product.photo.formats.medium.url
-													}
-												/>
+												<img src={product.photo.formats.medium.url} />
 											</div>
 											<div className='col-sm d-flex flex-column justify-content-center'>
 												<div className='h3 text-uppercase title-wrap'>

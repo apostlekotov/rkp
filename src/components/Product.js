@@ -10,7 +10,7 @@ export const Product = ({ products }) => {
 				<div key={product.id} className='col-12 col-xl-6 p-5 product-wrapper'>
 					<div className='container'>
 						<img
-							src={process.env.API_URL + product.photo.formats.medium.url}
+							src={product.photo.formats.medium.url}
 							alt={product.title}
 						/>
 						<div className='info'>

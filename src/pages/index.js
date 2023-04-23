@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { getProducts } from '@/utils/api';
+import { getProducts } from '@/utils/mock-api';
 import { Contacts } from '@/components/Contacts';
 import { Product } from '@/components/Product';
 import { PartnersList } from '@/components/PartnersList';
