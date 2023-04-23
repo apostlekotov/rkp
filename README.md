@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Design
 
-Design is made in XD [> link](https://xd.adobe.com/view/deaf975d-1d4a-42e2-8310-06c74dad4f45-8bfc/)
+Design is made in XD: [link](https://xd.adobe.com/view/be1053ef-e4df-4e2b-b052-e11adeca3b13-eb43)
 
 ### Author
 
